@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240112 14:46:30.373" rpa="false" schemaversion="4">
+<suite id="s1" name="Testsuite" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/testsuite.robot">
+<test id="s1-t1" name="Open Test Application" line="15">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=13</arg>
+<arg>deviceName=Rhythm's M13</arg>
+<arg>appPackage=com.sec.android.app.popupcalculator</arg>
+<arg>appActivity=com.sec.android.app.popupcalculator.Calculator</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240112 14:46:50.768" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240112 14:46:50.767" endtime="20240112 14:46:50.813"/>
+</kw>
+<msg timestamp="20240112 14:46:50.815" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240112 14:46:50.815" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20178ms.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20178ms.
+    at getResponseForW3CError (/tmp/.mount_Appiumt60wTZ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/tmp/.mount_Appiumt60wTZ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</msg>
+<status status="FAIL" starttime="20240112 14:46:30.502" endtime="20240112 14:46:50.815"/>
+</kw>
+<status status="FAIL" starttime="20240112 14:46:30.502" endtime="20240112 14:46:50.816">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20178ms.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20178ms.
+    at getResponseForW3CError (/tmp/.mount_Appiumt60wTZ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/tmp/.mount_Appiumt60wTZ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</status>
+</test>
+<status status="FAIL" starttime="20240112 14:46:30.374" endtime="20240112 14:46:50.816"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testsuite">Testsuite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240112 14:46:50.815" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

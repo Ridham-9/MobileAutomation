@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 17:38:02.509" rpa="false" schemaversion="4">
+<suite id="s1" name="Flipkart" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/Flipkart.robot">
+<test id="s1-t1" name="Open Test Application" line="20">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<arg>allowInsecure=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240117 17:38:02.608" endtime="20240117 17:38:13.845"/>
+</kw>
+<status status="PASS" starttime="20240117 17:38:02.607" endtime="20240117 17:38:13.847"/>
+</test>
+<test id="s1-t2" name="Select Item" line="31">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>150</arg>
+<arg>3000</arg>
+<arg>150</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240117 17:38:13.850" endtime="20240117 17:38:15.216"/>
+</kw>
+<status status="PASS" starttime="20240117 17:38:13.848" endtime="20240117 17:38:15.216"/>
+</test>
+<test id="s1-t3" name="Go to cart" line="51">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CART}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240117 17:38:23.134" level="INFO">xpath criteria: //android.widget.TextView[@text="Cart"]</msg>
+<status status="PASS" starttime="20240117 17:38:15.218" endtime="20240117 17:38:23.134"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CART}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 17:38:23.141" level="INFO">Clicking element '//android.widget.TextView[@text="Cart"]'.</msg>
+<msg timestamp="20240117 17:38:26.085" level="INFO">xpath criteria: //android.widget.TextView[@text="Cart"]</msg>
+<status status="PASS" starttime="20240117 17:38:23.135" endtime="20240117 17:38:26.085"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240117 17:38:29.186" level="INFO">xpath criteria: //android.widget.TextView[@text="Place order "]
+xpath criteria: //android.widget.TextView[@text="Place order "]</msg>
+<status status="PASS" starttime="20240117 17:38:26.086" endtime="20240117 17:38:29.187"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 17:38:29.190" level="INFO">Clicking element '//android.widget.TextView[@text="Place order "]'.</msg>
+<msg timestamp="20240117 17:38:30.155" level="INFO">xpath criteria: //android.widget.TextView[@text="Place order "]</msg>
+<status status="PASS" starttime="20240117 17:38:29.187" endtime="20240117 17:38:30.156"/>
+</kw>
+<status status="PASS" starttime="20240117 17:38:15.217" endtime="20240117 17:38:30.156"/>
+</test>
+<status status="PASS" starttime="20240117 17:38:02.510" endtime="20240117 17:38:30.158"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

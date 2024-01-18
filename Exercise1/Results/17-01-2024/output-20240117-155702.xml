@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 15:57:02.132" rpa="false" schemaversion="4">
+<suite id="s1" name="Flipkart" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/Flipkart.robot">
+<test id="s1-t1" name="Open Test Application" line="20">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<arg>allowInsecure=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<msg timestamp="20240117 15:57:02.239" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fde2f9d42e0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<msg timestamp="20240117 15:57:02.239" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fde2f9d4670&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<msg timestamp="20240117 15:57:02.240" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fde2f9d4730&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240117 15:57:02.240" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240117 15:57:02.240" endtime="20240117 15:57:02.242"/>
+</kw>
+<msg timestamp="20240117 15:57:02.243" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240117 15:57:02.244" level="FAIL">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fde2f97b0a0&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<status status="FAIL" starttime="20240117 15:57:02.235" endtime="20240117 15:57:02.244"/>
+</kw>
+<status status="FAIL" starttime="20240117 15:57:02.235" endtime="20240117 15:57:02.244">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fde2f97b0a0&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</test>
+<test id="s1-t2" name="Select Item" line="31">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>0</arg>
+<arg>0</arg>
+<arg>540</arg>
+<arg>1577</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240117 15:57:02.245" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240117 15:57:02.245" endtime="20240117 15:57:02.245"/>
+</kw>
+<msg timestamp="20240117 15:57:02.246" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240117 15:57:02.247" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240117 15:57:02.245" endtime="20240117 15:57:02.247"/>
+</kw>
+<status status="FAIL" starttime="20240117 15:57:02.244" endtime="20240117 15:57:02.247">No application is open</status>
+</test>
+<test id="s1-t3" name="Go to cart" line="51">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CART}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240117 15:57:02.248" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240117 15:57:02.248" endtime="20240117 15:57:02.248"/>
+</kw>
+<msg timestamp="20240117 15:57:02.250" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240117 15:57:02.250" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240117 15:57:02.247" endtime="20240117 15:57:02.250"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CART}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240117 15:57:02.250" endtime="20240117 15:57:02.250"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20240117 15:57:02.250" endtime="20240117 15:57:02.250"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240117 15:57:02.250" endtime="20240117 15:57:02.251"/>
+</kw>
+<status status="FAIL" starttime="20240117 15:57:02.247" endtime="20240117 15:57:02.251">No application is open</status>
+</test>
+<status status="FAIL" starttime="20240117 15:57:02.134" endtime="20240117 15:57:02.251"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240117 15:57:02.239" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fde2f9d42e0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<msg timestamp="20240117 15:57:02.239" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fde2f9d4670&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<msg timestamp="20240117 15:57:02.240" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fde2f9d4730&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<msg timestamp="20240117 15:57:02.243" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240117 15:57:02.246" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240117 15:57:02.250" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

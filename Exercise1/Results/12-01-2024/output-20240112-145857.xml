@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240112 14:58:57.030" rpa="false" schemaversion="4">
+<suite id="s1" name="Testsuite" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/testsuite.robot">
+<test id="s1-t1" name="Open Test Application" line="17">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>shouldTerminateApp: False</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<msg timestamp="20240112 14:58:57.128" level="FAIL">Keyword 'AppiumLibrary.Open Application' got positional argument after named arguments.</msg>
+<status status="FAIL" starttime="20240112 14:58:57.128" endtime="20240112 14:58:57.128"/>
+</kw>
+<status status="FAIL" starttime="20240112 14:58:57.127" endtime="20240112 14:58:57.128">Keyword 'AppiumLibrary.Open Application' got positional argument after named arguments.</status>
+</test>
+<status status="FAIL" starttime="20240112 14:58:57.030" endtime="20240112 14:58:57.129"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testsuite">Testsuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

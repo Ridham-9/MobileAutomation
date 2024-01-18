@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240110 14:19:13.743" rpa="false" schemaversion="4">
+<suite id="s1" name="Testsuite" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/testsuite.robot">
+<test id="s1-t1" name="Open Test application" line="17">
+<kw name="Open Application">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME} platformVersion=${PLATFORM_VERSION}</arg>
+<arg>app=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<msg timestamp="20240110 14:19:13.764" level="FAIL">No keyword with name 'Open Application' found.</msg>
+<status status="FAIL" starttime="20240110 14:19:13.764" endtime="20240110 14:19:13.764"/>
+</kw>
+<status status="FAIL" starttime="20240110 14:19:13.762" endtime="20240110 14:19:13.765">No keyword with name 'Open Application' found.</status>
+</test>
+<status status="FAIL" starttime="20240110 14:19:13.745" endtime="20240110 14:19:13.765"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testsuite">Testsuite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240110 14:19:13.761" level="ERROR">Error in file '/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/testsuite.robot' on line 2: Importing library 'AppiunLibrary' failed: ModuleNotFoundError: No module named 'AppiunLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/ridham/.local/bin
+  /usr/lib/python38.zip
+  /usr/lib/python3.8
+  /usr/lib/python3.8/lib-dynload
+  /home/ridham/.local/lib/python3.8/site-packages
+  /usr/local/lib/python3.8/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+</errors>
+</robot>

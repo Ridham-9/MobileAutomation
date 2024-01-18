@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240112 15:07:32.104" rpa="false" schemaversion="4">
+<suite id="s1" name="Testsuite" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/testsuite.robot">
+<test id="s1-t1" name="Open Test Application" line="21">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240112 15:07:32.212" endtime="20240112 15:07:42.733"/>
+</kw>
+<status status="PASS" starttime="20240112 15:07:32.212" endtime="20240112 15:07:42.734"/>
+</test>
+<test id="s1-t2" name="Perform Some Operation" line="31">
+<kw name="Perform Addition">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@content-desc="6"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240112 15:07:42.751" level="INFO">Clicking element '//android.widget.Button[@content-desc="6"]'.</msg>
+<msg timestamp="20240112 15:07:44.183" level="INFO">xpath criteria: //android.widget.Button[@content-desc="6"]</msg>
+<status status="PASS" starttime="20240112 15:07:42.740" endtime="20240112 15:07:44.184"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@content-desc="Plus"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240112 15:07:44.189" level="INFO">Clicking element '//android.widget.Button[@content-desc="Plus"]'.</msg>
+<msg timestamp="20240112 15:07:44.768" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Plus"]</msg>
+<status status="PASS" starttime="20240112 15:07:44.184" endtime="20240112 15:07:44.769"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@content-desc="3"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240112 15:07:44.775" level="INFO">Clicking element '//android.widget.Button[@content-desc="3"]'.</msg>
+<msg timestamp="20240112 15:07:45.592" level="INFO">xpath criteria: //android.widget.Button[@content-desc="3"]</msg>
+<status status="PASS" starttime="20240112 15:07:44.769" endtime="20240112 15:07:45.592"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@content-desc="Equal"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240112 15:07:45.594" level="INFO">Clicking element '//android.widget.Button[@content-desc="Equal"]'.</msg>
+<msg timestamp="20240112 15:07:46.184" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Equal"]</msg>
+<status status="PASS" starttime="20240112 15:07:45.592" endtime="20240112 15:07:46.184"/>
+</kw>
+<status status="PASS" starttime="20240112 15:07:42.738" endtime="20240112 15:07:46.184"/>
+</kw>
+<status status="PASS" starttime="20240112 15:07:42.735" endtime="20240112 15:07:46.184"/>
+</test>
+<status status="PASS" starttime="20240112 15:07:32.106" endtime="20240112 15:07:46.185"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Testsuite">Testsuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

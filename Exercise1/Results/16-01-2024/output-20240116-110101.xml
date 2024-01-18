@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240116 11:01:01.168" rpa="false" schemaversion="4">
+<suite id="s1" name="Flipkart" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/Flipkart.robot">
+<test id="s1-t1" name="Open Test Application" line="17">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240116 11:01:01.275" endtime="20240116 11:01:14.277"/>
+</kw>
+<status status="PASS" starttime="20240116 11:01:01.275" endtime="20240116 11:01:14.279"/>
+</test>
+<test id="s1-t2" name="Go to cart" line="27">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CART}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240116 11:01:14.291" level="INFO">Clicking element '//android.widget.TextView[@text="Cart"]'.</msg>
+<msg timestamp="20240116 11:01:20.481" level="INFO">xpath criteria: //android.widget.TextView[@text="Cart"]</msg>
+<status status="PASS" starttime="20240116 11:01:14.281" endtime="20240116 11:01:20.481"/>
+</kw>
+<kw name="Execute JavaScript">
+<arg>document.querySelectorAll('//android.widget.TextView[@text="Place order"]').click();</arg>
+<msg timestamp="20240116 11:01:20.484" level="FAIL">No keyword with name 'Execute JavaScript' found. Did you mean:
+    AppiumLibrary.Execute Script</msg>
+<status status="FAIL" starttime="20240116 11:01:20.484" endtime="20240116 11:01:20.485"/>
+</kw>
+<status status="FAIL" starttime="20240116 11:01:14.280" endtime="20240116 11:01:20.485">No keyword with name 'Execute JavaScript' found. Did you mean:
+    AppiumLibrary.Execute Script</status>
+</test>
+<status status="FAIL" starttime="20240116 11:01:01.169" endtime="20240116 11:01:20.486"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

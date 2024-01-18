@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 17:32:58.316" rpa="false" schemaversion="4">
+<suite id="s1" name="Flipkart" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/Flipkart.robot">
+<test id="s1-t1" name="Open Test Application" line="20">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<arg>allowInsecure=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240117 17:32:58.418" endtime="20240117 17:33:10.202"/>
+</kw>
+<status status="PASS" starttime="20240117 17:32:58.417" endtime="20240117 17:33:10.203"/>
+</test>
+<test id="s1-t2" name="Select Item" line="31">
+<kw name="Swipe By Coordinates">
+<arg>30</arg>
+<arg>20</arg>
+<arg>150</arg>
+<arg>2500</arg>
+<msg timestamp="20240117 17:33:10.211" level="FAIL">No keyword with name 'Swipe By Coordinates' found. Did you try using keyword 'AppiumLibrary.Swipe' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" starttime="20240117 17:33:10.211" endtime="20240117 17:33:10.211"/>
+</kw>
+<status status="FAIL" starttime="20240117 17:33:10.204" endtime="20240117 17:33:10.211">No keyword with name 'Swipe By Coordinates' found. Did you try using keyword 'AppiumLibrary.Swipe' and forgot to use enough whitespace between keyword and arguments?</status>
+</test>
+<test id="s1-t3" name="Go to cart" line="51">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CART}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240117 17:33:14.579" level="INFO">xpath criteria: //android.widget.TextView[@text="Cart"]
+xpath criteria: //android.widget.TextView[@text="Cart"]</msg>
+<status status="PASS" starttime="20240117 17:33:10.212" endtime="20240117 17:33:14.580"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CART}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 17:33:14.588" level="INFO">Clicking element '//android.widget.TextView[@text="Cart"]'.</msg>
+<msg timestamp="20240117 17:33:19.187" level="INFO">xpath criteria: //android.widget.TextView[@text="Cart"]</msg>
+<status status="PASS" starttime="20240117 17:33:14.580" endtime="20240117 17:33:19.187"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240117 17:33:22.728" level="INFO">xpath criteria: //android.widget.TextView[@text="Place order "]
+xpath criteria: //android.widget.TextView[@text="Place order "]</msg>
+<status status="PASS" starttime="20240117 17:33:19.188" endtime="20240117 17:33:22.728"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 17:33:22.732" level="INFO">Clicking element '//android.widget.TextView[@text="Place order "]'.</msg>
+<msg timestamp="20240117 17:33:23.609" level="INFO">xpath criteria: //android.widget.TextView[@text="Place order "]</msg>
+<status status="PASS" starttime="20240117 17:33:22.728" endtime="20240117 17:33:23.610"/>
+</kw>
+<status status="PASS" starttime="20240117 17:33:10.212" endtime="20240117 17:33:23.611"/>
+</test>
+<status status="FAIL" starttime="20240117 17:32:58.318" endtime="20240117 17:33:23.613"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

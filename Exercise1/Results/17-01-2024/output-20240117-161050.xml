@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 16:10:50.299" rpa="false" schemaversion="4">
+<suite id="s1" name="Calculator" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/Calculator.robot">
+<test id="s1-t1" name="Open Test Application" line="72">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240117 16:10:50.397" endtime="20240117 16:11:03.775"/>
+</kw>
+<status status="PASS" starttime="20240117 16:10:50.397" endtime="20240117 16:11:03.775"/>
+</test>
+<test id="s1-t2" name="Perform Some Operation" line="82">
+<kw name="Perform Addition">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:03.780" level="INFO">Clicking element '//android.widget.Button[@content-desc="6"]'.</msg>
+<msg timestamp="20240117 16:11:05.178" level="INFO">xpath criteria: //android.widget.Button[@content-desc="6"]</msg>
+<status status="PASS" starttime="20240117 16:11:03.777" endtime="20240117 16:11:05.178"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:05.186" level="INFO">Clicking element '//android.widget.Button[@content-desc="7"]'.</msg>
+<msg timestamp="20240117 16:11:06.016" level="INFO">xpath criteria: //android.widget.Button[@content-desc="7"]</msg>
+<status status="PASS" starttime="20240117 16:11:05.179" endtime="20240117 16:11:06.016"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:06.020" level="INFO">Clicking element '//android.widget.Button[@content-desc="5"]'.</msg>
+<msg timestamp="20240117 16:11:07.532" level="INFO">xpath criteria: //android.widget.Button[@content-desc="5"]</msg>
+<status status="PASS" starttime="20240117 16:11:06.017" endtime="20240117 16:11:07.532"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PLUS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:07.539" level="INFO">Clicking element '//android.widget.Button[@content-desc="Plus"]'.</msg>
+<msg timestamp="20240117 16:11:08.358" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Plus"]</msg>
+<status status="PASS" starttime="20240117 16:11:07.533" endtime="20240117 16:11:08.358"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:08.360" level="INFO">Clicking element '//android.widget.Button[@content-desc="2"]'.</msg>
+<msg timestamp="20240117 16:11:08.958" level="INFO">xpath criteria: //android.widget.Button[@content-desc="2"]</msg>
+<status status="PASS" starttime="20240117 16:11:08.358" endtime="20240117 16:11:08.958"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:08.963" level="INFO">Clicking element '//android.widget.Button[@content-desc="5"]'.</msg>
+<msg timestamp="20240117 16:11:09.804" level="INFO">xpath criteria: //android.widget.Button[@content-desc="5"]</msg>
+<status status="PASS" starttime="20240117 16:11:08.959" endtime="20240117 16:11:09.804"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${EQUAL}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:09.806" level="INFO">Clicking element '//android.widget.Button[@content-desc="Equal"]'.</msg>
+<msg timestamp="20240117 16:11:10.389" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Equal"]</msg>
+<status status="PASS" starttime="20240117 16:11:09.804" endtime="20240117 16:11:10.389"/>
+</kw>
+<status status="PASS" starttime="20240117 16:11:03.776" endtime="20240117 16:11:10.389"/>
+</kw>
+<kw name="Perform Substrsction">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:10.391" level="INFO">Clicking element '//android.widget.Button[@content-desc="6"]'.</msg>
+<msg timestamp="20240117 16:11:11.469" level="INFO">xpath criteria: //android.widget.Button[@content-desc="6"]</msg>
+<status status="PASS" starttime="20240117 16:11:10.390" endtime="20240117 16:11:11.469"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:11.478" level="INFO">Clicking element '//android.widget.Button[@content-desc="7"]'.</msg>
+<msg timestamp="20240117 16:11:12.300" level="INFO">xpath criteria: //android.widget.Button[@content-desc="7"]</msg>
+<status status="PASS" starttime="20240117 16:11:11.470" endtime="20240117 16:11:12.301"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:12.303" level="INFO">Clicking element '//android.widget.Button[@content-desc="5"]'.</msg>
+<msg timestamp="20240117 16:11:13.116" level="INFO">xpath criteria: //android.widget.Button[@content-desc="5"]</msg>
+<status status="PASS" starttime="20240117 16:11:12.301" endtime="20240117 16:11:13.116"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${MINUS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:13.118" level="INFO">Clicking element '//android.widget.Button[@content-desc="Minus"]'.</msg>
+<msg timestamp="20240117 16:11:13.715" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Minus"]</msg>
+<status status="PASS" starttime="20240117 16:11:13.116" endtime="20240117 16:11:13.715"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:13.718" level="INFO">Clicking element '//android.widget.Button[@content-desc="2"]'.</msg>
+<msg timestamp="20240117 16:11:14.565" level="INFO">xpath criteria: //android.widget.Button[@content-desc="2"]</msg>
+<status status="PASS" starttime="20240117 16:11:13.715" endtime="20240117 16:11:14.565"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:14.568" level="INFO">Clicking element '//android.widget.Button[@content-desc="5"]'.</msg>
+<msg timestamp="20240117 16:11:15.144" level="INFO">xpath criteria: //android.widget.Button[@content-desc="5"]</msg>
+<status status="PASS" starttime="20240117 16:11:14.565" endtime="20240117 16:11:15.144"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${EQUAL}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:15.147" level="INFO">Clicking element '//android.widget.Button[@content-desc="Equal"]'.</msg>
+<msg timestamp="20240117 16:11:15.746" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Equal"]</msg>
+<status status="PASS" starttime="20240117 16:11:15.144" endtime="20240117 16:11:15.747"/>
+</kw>
+<status status="PASS" starttime="20240117 16:11:10.390" endtime="20240117 16:11:15.747"/>
+</kw>
+<kw name="Perform Multiplication">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:15.750" level="INFO">Clicking element '//android.widget.Button[@content-desc="6"]'.</msg>
+<msg timestamp="20240117 16:11:16.765" level="INFO">xpath criteria: //android.widget.Button[@content-desc="6"]</msg>
+<status status="PASS" starttime="20240117 16:11:15.747" endtime="20240117 16:11:16.765"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:16.775" level="INFO">Clicking element '//android.widget.Button[@content-desc="7"]'.</msg>
+<msg timestamp="20240117 16:11:17.583" level="INFO">xpath criteria: //android.widget.Button[@content-desc="7"]</msg>
+<status status="PASS" starttime="20240117 16:11:16.766" endtime="20240117 16:11:17.583"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:17.589" level="INFO">Clicking element '//android.widget.Button[@content-desc="5"]'.</msg>
+<msg timestamp="20240117 16:11:18.378" level="INFO">xpath criteria: //android.widget.Button[@content-desc="5"]</msg>
+<status status="PASS" starttime="20240117 16:11:17.583" endtime="20240117 16:11:18.378"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${MULTIPLY}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:18.383" level="INFO">Clicking element '//android.widget.Button[@content-desc="Multiplication"]'.</msg>
+<msg timestamp="20240117 16:11:19.192" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Multiplication"]</msg>
+<status status="PASS" starttime="20240117 16:11:18.378" endtime="20240117 16:11:19.193"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:19.199" level="INFO">Clicking element '//android.widget.Button[@content-desc="2"]'.</msg>
+<msg timestamp="20240117 16:11:20.023" level="INFO">xpath criteria: //android.widget.Button[@content-desc="2"]</msg>
+<status status="PASS" starttime="20240117 16:11:19.193" endtime="20240117 16:11:20.023"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:20.033" level="INFO">Clicking element '//android.widget.Button[@content-desc="5"]'.</msg>
+<msg timestamp="20240117 16:11:20.622" level="INFO">xpath criteria: //android.widget.Button[@content-desc="5"]</msg>
+<status status="PASS" starttime="20240117 16:11:20.024" endtime="20240117 16:11:20.623"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${EQUAL}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:20.629" level="INFO">Clicking element '//android.widget.Button[@content-desc="Equal"]'.</msg>
+<msg timestamp="20240117 16:11:21.421" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Equal"]</msg>
+<status status="PASS" starttime="20240117 16:11:20.623" endtime="20240117 16:11:21.421"/>
+</kw>
+<status status="PASS" starttime="20240117 16:11:15.747" endtime="20240117 16:11:21.421"/>
+</kw>
+<kw name="Perform Division">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:21.429" level="INFO">Clicking element '//android.widget.Button[@content-desc="6"]'.</msg>
+<msg timestamp="20240117 16:11:22.405" level="INFO">xpath criteria: //android.widget.Button[@content-desc="6"]</msg>
+<status status="PASS" starttime="20240117 16:11:21.423" endtime="20240117 16:11:22.405"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:22.411" level="INFO">Clicking element '//android.widget.Button[@content-desc="7"]'.</msg>
+<msg timestamp="20240117 16:11:23.214" level="INFO">xpath criteria: //android.widget.Button[@content-desc="7"]</msg>
+<status status="PASS" starttime="20240117 16:11:22.405" endtime="20240117 16:11:23.214"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:23.216" level="INFO">Clicking element '//android.widget.Button[@content-desc="5"]'.</msg>
+<msg timestamp="20240117 16:11:24.018" level="INFO">xpath criteria: //android.widget.Button[@content-desc="5"]</msg>
+<status status="PASS" starttime="20240117 16:11:23.214" endtime="20240117 16:11:24.019"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIVISION}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:24.031" level="INFO">Clicking element '//android.widget.Button[@content-desc="Division"]'.</msg>
+<msg timestamp="20240117 16:11:24.829" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Division"]</msg>
+<status status="PASS" starttime="20240117 16:11:24.019" endtime="20240117 16:11:24.829"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:24.831" level="INFO">Clicking element '//android.widget.Button[@content-desc="2"]'.</msg>
+<msg timestamp="20240117 16:11:25.394" level="INFO">xpath criteria: //android.widget.Button[@content-desc="2"]</msg>
+<status status="PASS" starttime="20240117 16:11:24.829" endtime="20240117 16:11:25.395"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:25.397" level="INFO">Clicking element '//android.widget.Button[@content-desc="5"]'.</msg>
+<msg timestamp="20240117 16:11:25.996" level="INFO">xpath criteria: //android.widget.Button[@content-desc="5"]</msg>
+<status status="PASS" starttime="20240117 16:11:25.395" endtime="20240117 16:11:25.996"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${EQUAL}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:25.999" level="INFO">Clicking element '//android.widget.Button[@content-desc="Equal"]'.</msg>
+<msg timestamp="20240117 16:11:26.794" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Equal"]</msg>
+<status status="PASS" starttime="20240117 16:11:25.996" endtime="20240117 16:11:26.794"/>
+</kw>
+<status status="PASS" starttime="20240117 16:11:21.422" endtime="20240117 16:11:26.794"/>
+</kw>
+<kw name="Perform Percentage">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:26.801" level="INFO">Clicking element '//android.widget.Button[@content-desc="6"]'.</msg>
+<msg timestamp="20240117 16:11:27.775" level="INFO">xpath criteria: //android.widget.Button[@content-desc="6"]</msg>
+<status status="PASS" starttime="20240117 16:11:26.795" endtime="20240117 16:11:27.776"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:27.787" level="INFO">Clicking element '//android.widget.Button[@content-desc="7"]'.</msg>
+<msg timestamp="20240117 16:11:28.559" level="INFO">xpath criteria: //android.widget.Button[@content-desc="7"]</msg>
+<status status="PASS" starttime="20240117 16:11:27.777" endtime="20240117 16:11:28.559"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:28.562" level="INFO">Clicking element '//android.widget.Button[@content-desc="5"]'.</msg>
+<msg timestamp="20240117 16:11:29.376" level="INFO">xpath criteria: //android.widget.Button[@content-desc="5"]</msg>
+<status status="PASS" starttime="20240117 16:11:28.560" endtime="20240117 16:11:29.376"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${MODULO}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:29.383" level="INFO">Clicking element '//android.widget.Button[@content-desc="Percentage"]'.</msg>
+<msg timestamp="20240117 16:11:30.388" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Percentage"]</msg>
+<status status="PASS" starttime="20240117 16:11:29.377" endtime="20240117 16:11:30.388"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:30.395" level="INFO">Clicking element '//android.widget.Button[@content-desc="2"]'.</msg>
+<msg timestamp="20240117 16:11:31.173" level="INFO">xpath criteria: //android.widget.Button[@content-desc="2"]</msg>
+<status status="PASS" starttime="20240117 16:11:30.389" endtime="20240117 16:11:31.173"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:31.179" level="INFO">Clicking element '//android.widget.Button[@content-desc="5"]'.</msg>
+<msg timestamp="20240117 16:11:31.934" level="INFO">xpath criteria: //android.widget.Button[@content-desc="5"]</msg>
+<status status="PASS" starttime="20240117 16:11:31.173" endtime="20240117 16:11:31.934"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${EQUAL}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 16:11:31.941" level="INFO">Clicking element '//android.widget.Button[@content-desc="Equal"]'.</msg>
+<msg timestamp="20240117 16:11:32.719" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Equal"]</msg>
+<status status="PASS" starttime="20240117 16:11:31.935" endtime="20240117 16:11:32.719"/>
+</kw>
+<status status="PASS" starttime="20240117 16:11:26.795" endtime="20240117 16:11:32.720"/>
+</kw>
+<status status="PASS" starttime="20240117 16:11:03.776" endtime="20240117 16:11:32.720"/>
+</test>
+<status status="PASS" starttime="20240117 16:10:50.300" endtime="20240117 16:11:32.722"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Calculator">Calculator</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

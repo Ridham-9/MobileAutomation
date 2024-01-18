@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240115 17:00:03.492" rpa="false" schemaversion="4">
+<suite id="s1" name="Flipkart" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/Flipkart.robot">
+<test id="s1-t1" name="Open Test Application" line="17">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240115 17:00:12.174" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240115 17:00:12.173" endtime="20240115 17:00:12.231"/>
+</kw>
+<msg timestamp="20240115 17:00:12.233" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240115 17:00:12.233" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/tmp/.mount_Appium7NrwKh/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getDevicePixelRatio (/tmp/.mount_Appium7NrwKh/resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/viewport.js:14:10)
+    at AndroidUiautomator2Driver.fillDeviceDetails (/tmp/.mount_Appium7NrwKh/resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/driver.js:244:28)
+    at AndroidUiautomator2Driver.createSession (/tmp/.mount_Appium7NrwKh/resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/driver.js:230:7)
+    at AppiumDriver.createSession (/tmp/.mount_Appium7NrwKh/resources/app/node_modules/appium/lib/appium.js:387:35)</msg>
+<status status="FAIL" starttime="20240115 17:00:03.642" endtime="20240115 17:00:12.234"/>
+</kw>
+<status status="FAIL" starttime="20240115 17:00:03.641" endtime="20240115 17:00:12.234">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/tmp/.mount_Appium7NrwKh/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getDevicePixelRatio (/tmp/.mount_Appium7NrwKh/resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/viewport.js:14:10)
+    at AndroidUiautomator2Driver.fillDeviceDetails (/tmp/.mount_Appium7NrwKh/resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/driver.js:244:28)
+    at AndroidUiautomator2Driver.createSession (/tmp/.mount_Appium7NrwKh/resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/driver.js:230:7)
+    at AppiumDriver.createSession (/tmp/.mount_Appium7NrwKh/resources/app/node_modules/appium/lib/appium.js:387:35)</status>
+</test>
+<test id="s1-t2" name="Go to cart" line="27">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CART}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240115 17:00:12.239" level="INFO">Clicking element '//android.widget.TextView[@text="Cart"]'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240115 17:00:12.240" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240115 17:00:12.240" endtime="20240115 17:00:12.242"/>
+</kw>
+<msg timestamp="20240115 17:00:12.245" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240115 17:00:12.245" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240115 17:00:12.235" endtime="20240115 17:00:12.246"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240115 17:00:12.246" endtime="20240115 17:00:12.246"/>
+</kw>
+<status status="FAIL" starttime="20240115 17:00:12.235" endtime="20240115 17:00:12.247">No application is open</status>
+</test>
+<status status="FAIL" starttime="20240115 17:00:03.493" endtime="20240115 17:00:12.248"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240115 17:00:12.233" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240115 17:00:12.245" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

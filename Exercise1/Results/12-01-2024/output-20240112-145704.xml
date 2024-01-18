@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240112 14:57:04.790" rpa="false" schemaversion="4">
+<suite id="s1" name="Testsuite" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/testsuite.robot">
+<test id="s1-t1" name="Open Test Application" line="18">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240112 14:57:04.897" endtime="20240112 14:57:17.556"/>
+</kw>
+<status status="PASS" starttime="20240112 14:57:04.896" endtime="20240112 14:57:17.563"/>
+</test>
+<test id="s1-t2" name="Perform Some Operations" line="27">
+<kw name="Perform Addition">
+<msg timestamp="20240112 14:57:17.565" level="FAIL">User keyword cannot be empty.</msg>
+<status status="FAIL" starttime="20240112 14:57:17.565" endtime="20240112 14:57:17.566"/>
+</kw>
+<status status="FAIL" starttime="20240112 14:57:17.564" endtime="20240112 14:57:17.566">User keyword cannot be empty.</status>
+</test>
+<status status="FAIL" starttime="20240112 14:57:04.791" endtime="20240112 14:57:17.567"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Testsuite">Testsuite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240112 14:57:04.791" level="ERROR">Error in file '/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/testsuite.robot' on line 14: Creating keyword 'Perform Addition' failed: User keyword cannot be empty.</msg>
+</errors>
+</robot>

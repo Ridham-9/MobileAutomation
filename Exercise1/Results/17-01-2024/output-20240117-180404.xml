@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 18:04:04.813" rpa="false" schemaversion="4">
+<suite id="s1" name="Flipkart" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/Flipkart.robot">
+<test id="s1-t1" name="Open Test Application" line="20">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<arg>allowInsecure=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240117 18:04:04.922" endtime="20240117 18:04:16.801"/>
+</kw>
+<status status="PASS" starttime="20240117 18:04:04.921" endtime="20240117 18:04:16.802"/>
+</test>
+<test id="s1-t2" name="Select Item" line="31">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 18:04:18.804" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240117 18:04:16.803" endtime="20240117 18:04:18.804"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2000</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240117 18:04:18.805" endtime="20240117 18:04:20.976"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 18:04:22.978" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240117 18:04:20.976" endtime="20240117 18:04:22.978"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2000</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240117 18:04:22.978" endtime="20240117 18:04:24.440"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 18:04:26.443" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240117 18:04:24.441" endtime="20240117 18:04:26.443"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2000</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240117 18:04:26.444" endtime="20240117 18:04:28.108"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 18:04:30.110" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240117 18:04:28.109" endtime="20240117 18:04:30.110"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${SECTION}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240117 18:04:33.988" level="INFO">xpath criteria: //android.widget.ImageView[@index='0']</msg>
+<status status="PASS" starttime="20240117 18:04:30.111" endtime="20240117 18:04:33.988"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SECTION}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 18:04:33.999" level="INFO">Clicking element '//android.widget.ImageView[@index='0']'.</msg>
+<msg timestamp="20240117 18:04:36.505" level="INFO">xpath criteria: //android.widget.ImageView[@index='0']</msg>
+<status status="PASS" starttime="20240117 18:04:33.989" endtime="20240117 18:04:36.505"/>
+</kw>
+<status status="PASS" starttime="20240117 18:04:16.802" endtime="20240117 18:04:36.506"/>
+</test>
+<status status="PASS" starttime="20240117 18:04:04.814" endtime="20240117 18:04:36.509"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

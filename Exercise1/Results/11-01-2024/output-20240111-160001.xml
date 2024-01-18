@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240111 16:00:01.051" rpa="false" schemaversion="4">
+<suite id="s1" name="Testsuite" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/testsuite.robot">
+<test id="s1-t1" name="Open Test application" line="15">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME} platformVersion=${PLATFORM_VERSION}</arg>
+<arg>app=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240111 16:00:01.161" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240111 16:00:01.160" endtime="20240111 16:00:01.162"/>
+</kw>
+<msg timestamp="20240111 16:00:01.163" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240111 16:00:01.163" level="FAIL">InvalidArgumentException: Message: 'platformName' android platformVersion='13' not part of fake,android,ios,tvos,windows,mac,tizen,linux,roku,webos
+Stacktrace:
+InvalidArgumentError: 'platformName' android platformVersion='13' not part of fake,android,ios,tvos,windows,mac,tizen,linux,roku,webos
+    at validateCaps (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/capabilities.js:52:11)
+    at parseCaps (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/capabilities.js:165:20)
+    at processCapabilities (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/capabilities.js:211:43)
+    at parseCapsForInnerDriver (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/lib/utils.js:116:21)
+    at AppiumDriver.createSession (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/lib/appium.js:325:26)
+    at commandExecutor (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/driver.js:335:9)
+    at AppiumDriver.executeCommand (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/driver.js:349:15)
+    at AppiumDriver.executeCommand (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/lib/appium.js:549:26)
+    at asyncHandler (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:297:34)
+    at /tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:423:15
+    at Layer.handle [as handle_request] (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at next (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at /tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:335:12)
+    at next (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at logger (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:317:13)
+    at /tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:335:12)
+    at next (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at /tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/raw-body/index.js:224:16)
+    at done (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:322:22)</msg>
+<status status="FAIL" starttime="20240111 16:00:01.151" endtime="20240111 16:00:01.164"/>
+</kw>
+<status status="FAIL" starttime="20240111 16:00:01.151" endtime="20240111 16:00:01.164">InvalidArgumentException: Message: 'platformName' android platformVersion='13' not part of fake,android,ios,tvos,windows,mac,tizen,linux,roku,webos
+Stacktrace:
+InvalidArgumentError: 'platformName' android platformVersion='13' not part of fake,android,ios,tvos,windows,mac,tizen,linux,roku,webos
+    at validateCaps (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/capabilities.js:52:11)
+    at parseCaps (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/capabilities.js:165:20)
+    at processCapabilities (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/capabilities.js:211:43)
+    at parseCapsForInnerDriver (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/lib/utils.js:116:21)
+    at AppiumDriver.createSession (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/lib/appium.js:325:26)
+    at commandExecutor (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/driver.js:335:9)
+    at AppiumDriver.executeCommand (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/driver.js:3...
+    [ Message content over the limit has been removed. ]
+...zIoqJ/resources/app/node_modules/appium/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:317:13)
+    at /tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:335:12)
+    at next (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at /tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/raw-body/index.js:224:16)
+    at done (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/tmp/.mount_AppiumzzIoqJ/resources/app/node_modules/appium/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:322:22)</status>
+</test>
+<status status="FAIL" starttime="20240111 16:00:01.052" endtime="20240111 16:00:01.165"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testsuite">Testsuite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240111 16:00:01.163" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

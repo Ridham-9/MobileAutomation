@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240112 11:56:30.304" rpa="false" schemaversion="4">
+<suite id="s1" name="Testsuite" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/testsuite.robot">
+<test id="s1-t1" name="Open Test application" line="15">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME} platformVersion=${PLATFORM_VERSION}</arg>
+<arg>app=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<msg timestamp="20240112 11:56:30.812" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fcf1093de50&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<msg timestamp="20240112 11:56:30.813" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fcf108e3220&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<msg timestamp="20240112 11:56:30.814" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fcf108e32e0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240112 11:56:30.816" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240112 11:56:30.815" endtime="20240112 11:56:30.857"/>
+</kw>
+<msg timestamp="20240112 11:56:30.859" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240112 11:56:30.859" level="FAIL">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fcf108e3c10&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<status status="FAIL" starttime="20240112 11:56:30.808" endtime="20240112 11:56:30.860"/>
+</kw>
+<status status="FAIL" starttime="20240112 11:56:30.808" endtime="20240112 11:56:30.860">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fcf108e3c10&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</test>
+<status status="FAIL" starttime="20240112 11:56:30.305" endtime="20240112 11:56:30.861"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testsuite">Testsuite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240112 11:56:30.812" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fcf1093de50&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<msg timestamp="20240112 11:56:30.813" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fcf108e3220&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<msg timestamp="20240112 11:56:30.814" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fcf108e32e0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /wd/hub/session</msg>
+<msg timestamp="20240112 11:56:30.859" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

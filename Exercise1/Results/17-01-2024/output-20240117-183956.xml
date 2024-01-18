@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 18:39:56.785" rpa="false" schemaversion="4">
+<suite id="s1" name="Flipkart" source="/home/ridham/PycharmProjects/mobileAutomation/Exercise1/Tests/Flipkart.robot">
+<test id="s1-t1" name="Open Test Application" line="20">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<arg>allowInsecure=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240117 18:39:56.886" endtime="20240117 18:40:09.029"/>
+</kw>
+<status status="PASS" starttime="20240117 18:39:56.886" endtime="20240117 18:40:09.029"/>
+</test>
+<test id="s1-t2" name="Select Item" line="31">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 18:40:11.031" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240117 18:40:09.030" endtime="20240117 18:40:11.031"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2200</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240117 18:40:11.032" endtime="20240117 18:40:15.322"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 18:40:17.324" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240117 18:40:15.323" endtime="20240117 18:40:17.324"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2100</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240117 18:40:17.325" endtime="20240117 18:40:19.817"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 18:40:21.818" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240117 18:40:19.817" endtime="20240117 18:40:21.819"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2100</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240117 18:40:21.819" endtime="20240117 18:40:24.027"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 18:40:26.029" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240117 18:40:24.028" endtime="20240117 18:40:26.030"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SECTION}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240117 18:40:26.034" level="INFO">Clicking element '//android.widget.TextView[@text="CAMPUS Women's Sports Shoes"]'.</msg>
+<msg timestamp="20240117 18:40:29.801" level="INFO">xpath criteria: //android.widget.TextView[@text="CAMPUS Women's Sports Shoes"]</msg>
+<status status="PASS" starttime="20240117 18:40:26.030" endtime="20240117 18:40:29.801"/>
+</kw>
+<status status="PASS" starttime="20240117 18:40:09.030" endtime="20240117 18:40:29.801"/>
+</test>
+<status status="PASS" starttime="20240117 18:39:56.787" endtime="20240117 18:40:29.801"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
