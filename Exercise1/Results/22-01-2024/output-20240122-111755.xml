@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240122 11:17:55.402" rpa="false" schemaversion="4">
+<suite id="s1" name="Flipkart" source="/home/ridham/PycharmProjects/MobileAutomation/Exercise1/Tests/Flipkart.robot">
+<test id="s1-t1" name="Open Test Application" line="26">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<arg>allowInsecure=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240122 11:18:17.036" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240122 11:18:17.036" endtime="20240122 11:18:17.093"/>
+</kw>
+<msg timestamp="20240122 11:18:17.099" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240122 11:18:17.100" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20186ms.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20186ms.
+    at getResponseForW3CError (/tmp/.mount_AppiumCyaF9r/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/tmp/.mount_AppiumCyaF9r/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</msg>
+<status status="FAIL" starttime="20240122 11:17:55.872" endtime="20240122 11:18:17.100"/>
+</kw>
+<status status="FAIL" starttime="20240122 11:17:55.849" endtime="20240122 11:18:17.101">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20186ms.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20186ms.
+    at getResponseForW3CError (/tmp/.mount_AppiumCyaF9r/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/tmp/.mount_AppiumCyaF9r/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</status>
+</test>
+<test id="s1-t2" name="Select Item" line="37">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240122 11:18:22.105" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240122 11:18:17.104" endtime="20240122 11:18:22.106"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2200</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240122 11:18:22.109" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240122 11:18:22.108" endtime="20240122 11:18:22.128"/>
+</kw>
+<msg timestamp="20240122 11:18:22.134" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240122 11:18:22.135" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240122 11:18:22.106" endtime="20240122 11:18:22.136"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.136" endtime="20240122 11:18:22.136"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2200</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.137" endtime="20240122 11:18:22.137"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.138" endtime="20240122 11:18:22.138"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2200</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.138" endtime="20240122 11:18:22.138"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.139" endtime="20240122 11:18:22.139"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<var>${element_found}</var>
+<arg>${SECTION}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.139" endtime="20240122 11:18:22.140"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${element_found}</arg>
+<arg>Click Element</arg>
+<arg>${SECTION}</arg>
+<arg>Else</arg>
+<arg>Log</arg>
+<arg>Element not found within the specified timeout</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.140" endtime="20240122 11:18:22.140"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${ITEM}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.141" endtime="20240122 11:18:22.141"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ITEM}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.141" endtime="20240122 11:18:22.142"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BUY}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.142" endtime="20240122 11:18:22.142"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BUY}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.142" endtime="20240122 11:18:22.143"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SIZE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.143" endtime="20240122 11:18:22.143"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONTIUNE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.143" endtime="20240122 11:18:22.143"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONTIUNE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 11:18:22.144" endtime="20240122 11:18:22.144"/>
+</kw>
+<status status="FAIL" starttime="20240122 11:18:17.102" endtime="20240122 11:18:22.144">No application is open</status>
+</test>
+<status status="FAIL" starttime="20240122 11:17:55.404" endtime="20240122 11:18:22.146"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240122 11:18:17.099" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240122 11:18:22.134" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

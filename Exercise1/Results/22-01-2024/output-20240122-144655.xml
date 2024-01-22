@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240122 14:46:55.785" rpa="false" schemaversion="4">
+<suite id="s1" name="Flipkart" source="/home/ridham/PycharmProjects/MobileAutomation/Exercise1/Tests/Flipkart.robot">
+<test id="s1-t1" name="Open Test Application" line="27">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<arg>allowInsecure=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240122 14:46:55.893" endtime="20240122 14:47:07.403"/>
+</kw>
+<status status="PASS" starttime="20240122 14:46:55.892" endtime="20240122 14:47:07.403"/>
+</test>
+<test id="s1-t2" name="Select Section" line="38">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240122 14:47:12.407" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240122 14:47:07.406" endtime="20240122 14:47:12.407"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2200</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240122 14:47:12.408" endtime="20240122 14:47:14.949"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240122 14:47:17.951" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240122 14:47:14.950" endtime="20240122 14:47:17.951"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2200</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240122 14:47:17.952" endtime="20240122 14:47:19.920"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240122 14:47:21.921" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240122 14:47:19.921" endtime="20240122 14:47:21.922"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>300</arg>
+<arg>2200</arg>
+<arg>300</arg>
+<arg>150</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20240122 14:47:21.923" endtime="20240122 14:47:24.013"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240122 14:47:26.015" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240122 14:47:24.014" endtime="20240122 14:47:26.015"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<var>${element_found}</var>
+<arg>${SECTION}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240122 14:47:29.755" level="FAIL">ScreenshotException: Message: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.TakeScreenshotException: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeDeviceScreenshot(ScreenshotHelper.java:129)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:62)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:77)
+	at io.appium.uiautomator2.handler.CaptureScreenshot.safeHandle(CaptureScreenshot.java:32)
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:266)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:260)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:1012)
+</msg>
+<status status="FAIL" starttime="20240122 14:47:28.557" endtime="20240122 14:47:29.758"/>
+</kw>
+<msg timestamp="20240122 14:47:29.762" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: ScreenshotException: Message: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.TakeScreenshotException: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeDeviceScreenshot(ScreenshotHelper.java:129)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:62)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:77)
+	at io.appium.uiautomator2.handler.CaptureScreenshot.safeHandle(CaptureScreenshot.java:32)
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:266)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:260)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.jav...
+    [ Message content over the limit has been removed. ]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:1012)</msg>
+<msg timestamp="20240122 14:47:29.763" level="INFO">xpath criteria: //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView</msg>
+<msg timestamp="20240122 14:47:29.763" level="FAIL">ValueError: Element locator '//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView' did not match any elements.</msg>
+<status status="FAIL" starttime="20240122 14:47:26.016" endtime="20240122 14:47:29.764"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_found}">
+<kw name="Log" library="BuiltIn">
+<arg>Element found within the specified timeout</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240122 14:47:29.765" endtime="20240122 14:47:29.765"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SECTION}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 14:47:29.766" endtime="20240122 14:47:29.766"/>
+</kw>
+<status status="NOT RUN" starttime="20240122 14:47:29.764" endtime="20240122 14:47:29.766"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>Element not found within the specified timeout</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240122 14:47:29.766" endtime="20240122 14:47:29.767"/>
+</kw>
+<status status="NOT RUN" starttime="20240122 14:47:29.766" endtime="20240122 14:47:29.767"/>
+</branch>
+<status status="NOT RUN" starttime="20240122 14:47:29.764" endtime="20240122 14:47:29.767"/>
+</if>
+<status status="FAIL" starttime="20240122 14:47:07.404" endtime="20240122 14:47:29.767">ValueError: Element locator '//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView' did not match any elements.</status>
+</test>
+<test id="s1-t3" name="Select Item" line="56">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${ITEM}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240122 14:47:48.889" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2300"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2300]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="com.flipkart.android" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2300]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2300]" displayed="true"&gt;
+        &lt;android.widget.LinearLayout index="0" package="com.flipkart.android" class="android.widget.LinearLayout" text="" resource-id="com.flipkart.android:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2300]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2300]" displayed="true"&gt;
+            &lt;androidx.drawerlayout.widget.DrawerLayout index="0" package="com.flipkart.android" class="androidx.drawerlayout.widget.DrawerLayout" text="" resource-id="com.flipkart.android:id/drawer_layout" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2300]" displayed="true"&gt;
+              &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" resource-id="com.flipkart.android:id/main_content_coordinator_layout" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2300]" displayed="true"&gt;
+                &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" resource-id="com.flipkart.android:id/contentFragment" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2300]" displayed="true"&gt;
+                  &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" resource-id="com.flipkart.android:id/main_content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2229]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2229]" displayed="true"&gt;
+                      &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2229]" displayed="true"&gt;
+                        &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2229]" displayed="true"&gt;
+                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2229]" displayed="true"&gt;
+                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2229]" displayed="true"&gt;
+                              &lt;android.widget.ScrollView index="0" package="com.flipkart.android" class="android.widget.ScrollView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,66][1080,2229]" displayed="true"&gt;
+                                &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2229]" displayed="true"&gt;
+                                  &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2229]" displayed="true"&gt;
+                                    &lt;android.view.ViewGroup index="11" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,522]" displayed="true"&gt;
+                                      &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,522]" displayed="true"&gt;
+                                        &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][360,522]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][360,522]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][360,522]" displayed="true"&gt;
+                                              &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][360,522]" displayed="true" /&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[360,66][720,522]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[360,66][720,522]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[360,66][720,522]" displayed="true"&gt;
+                                              &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[360,66][720,522]" displayed="true" /&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="2" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,66][1080,522]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,66][1080,522]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,66][1080,522]" displayed="true"&gt;
+                                              &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,66][1080,522]" displayed="true" /&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                      &lt;/android.view.ViewGroup&gt;
+                                    &lt;/android.view.ViewGroup&gt;
+                                    &lt;android.view.ViewGroup index="12" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,522][1080,762]" displayed="true"&gt;
+                                      &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,522][1080,762]" displayed="true"&gt;
+                                        &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,522][1080,762]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,522][1080,762]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,522][1080,762]" displayed="true"&gt;
+                                              &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,522][1080,762]" displayed="true" /&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                      &lt;/android.view.ViewGroup&gt;
+                                    &lt;/android.view.ViewGroup&gt;
+                                    &lt;android.view.ViewGroup index="13" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,762][1080,2188]" displayed="true"&gt;
+                                      &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,762][1080,2188]" displayed="true"&gt;
+                                        &lt;android.view.View index="0" package="com.flipkart.android" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,762][1080,2188]" displayed="true" /&gt;
+                                        &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,762][360,1208]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,762][360,1208]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,765][357,1205]" displayed="true"&gt;
+                                              &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,765][357,1075]" displayed="true"&gt;
+                                                &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,765][357,1075]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1074][357,1204]" displayed="true"&gt;
+                                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Blanket" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[132,1085][273,1142]" displayed="true" /&gt;
+                                                &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="From ₹99" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[116,1142][272,1193]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="2" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[382,762][697,1208]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[382,762][697,1208]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,765][695,1205]" displayed="true"&gt;
+                                              &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,765][695,1075]" displayed="true"&gt;
+                                                &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,765][695,1075]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,1074][695,1204]" displayed="true"&gt;
+                                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Caps, Beanies" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[406,1085][673,1142]" displayed="true" /&gt;
+                                                &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="From ₹99" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[453,1142][609,1193]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="3" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,762][1035,1208]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,762][1035,1208]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,765][1032,1205]" displayed="true"&gt;
+                                              &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,765][1032,1075]" displayed="true"&gt;
+                                                &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,765][1032,1075]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,1074][1032,1204]" displayed="true"&gt;
+                                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Rings" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[826,1085][929,1142]" displayed="true" /&gt;
+                                                &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="From ₹39" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[791,1142][947,1193]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="4" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,1230][360,1676]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,1230][360,1676]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1233][357,1673]" displayed="true"&gt;
+                                              &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1233][357,1543]" displayed="true"&gt;
+                                                &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1233][357,1543]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1542][357,1672]" displayed="true"&gt;
+                                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Socks" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[145,1553][260,1610]" displayed="true" /&gt;
+                                                &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="From ₹29" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[117,1610][272,1661]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="5" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[382,1230][697,1676]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[382,1230][697,1676]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,1233][695,1673]" displayed="true"&gt;
+                                              &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,1233][695,1543]" displayed="true"&gt;
+                                                &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,1233][695,1543]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,1542][695,1672]" displayed="true"&gt;
+                                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Wallpaper from 129" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[397,1553][683,1610]" displayed="true" /&gt;
+                                                &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="From ₹99" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[453,1610][609,1661]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="6" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,1230][1035,1676]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,1230][1035,1676]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,1233][1032,1673]" displayed="true"&gt;
+                                              &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,1233][1032,1543]" displayed="true"&gt;
+                                                &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,1233][1032,1543]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,1542][1032,1672]" displayed="true"&gt;
+                                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Laundry Basket" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[735,1553][1021,1610]" displayed="true" /&gt;
+                                                &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="From ₹99" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[791,1610][947,1661]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="7" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,1698][360,2144]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,1698][360,2144]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1701][357,2141]" displayed="true"&gt;
+                                              &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1701][357,2010]" displayed="true"&gt;
+                                                &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1701][357,2010]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,2010][357,2141]" displayed="true"&gt;
+                                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Hair Oil" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[135,2021][271,2078]" displayed="true" /&gt;
+                                                &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="From ₹39" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[116,2078][272,2129]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="8" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[382,1698][697,2144]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[382,1698][697,2144]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,1701][695,2141]" displayed="true"&gt;
+                                              &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,1701][695,2010]" displayed="true"&gt;
+                                                &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,1701][695,2010]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[385,2010][695,2141]" displayed="true"&gt;
+                                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Lipstick" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[467,2021][612,2078]" displayed="true" /&gt;
+                                                &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="From ₹39" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[453,2078][609,2129]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="9" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,1698][1035,2144]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,1698][1035,2144]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,1701][1032,2141]" displayed="true"&gt;
+                                              &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,1701][1032,2010]" displayed="true"&gt;
+                                                &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,1701][1032,2010]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[723,2010][1032,2141]" displayed="true"&gt;
+                                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Saree" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[823,2021][933,2078]" displayed="true" /&gt;
+                                                &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="From ₹299" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[781,2078][958,2129]" displayed="true" /&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                      &lt;/android.view.ViewGroup&gt;
+                                    &lt;/android.view.ViewGroup&gt;
+                                    &lt;android.view.ViewGroup index="14" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2188][1080,2229]" displayed="true"&gt;
+                                      &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2188][1080,2229]" displayed="true"&gt;
+                                        &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2188][1080,2229]" displayed="true"&gt;
+                                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2188][1080,2229]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2188][1080,2229]" displayed="true"&gt;
+                                              &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2188][1080,2229]" displayed="true" /&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.view.ViewGroup&gt;
+                                          &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="Popular in Fashion &amp;amp; Accessories" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,2222][945,2229]" displayed="true" /&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                      &lt;/android.view.ViewGroup&gt;
+                                    &lt;/android.view.ViewGroup&gt;
+                                  &lt;/android.view.ViewGroup&gt;
+                                &lt;/android.view.ViewGroup&gt;
+                              &lt;/android.widget.ScrollView&gt;
+                            &lt;/android.view.ViewGroup&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                        &lt;/android.view.ViewGroup&gt;
+                        &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,224]" displayed="true"&gt;
+                          &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,67][1080,224]" displayed="true"&gt;
+                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,67][1080,224]" displayed="true"&gt;
+                              &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="Brand Mall" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,67][181,140]" displayed="true" /&gt;
+                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,140][176,185]" displayed="true"&gt;
+                                &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,140][176,185]" displayed="true"&gt;
+                                  &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,143][87,182]" displayed="true" /&gt;
+                                  &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="OFF" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[90,144][176,181]" displayed="true" /&gt;
+                                &lt;/android.view.ViewGroup&gt;
+                              &lt;/android.view.ViewGroup&gt;
+                              &lt;android.view.ViewGroup index="2" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[243,67][1035,213]" displayed="true"&gt;
+                                &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[243,84][1035,197]" displayed="true"&gt;
+                                  &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[274,112][330,168]" displayed="true" /&gt;
+                                  &lt;android.view.ViewGroup index="2" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[358,87][852,194]" displayed="true"&gt;
+                                    &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="shoes" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[358,112][466,193]" displayed="true" /&gt;
+                                  &lt;/android.view.ViewGroup&gt;
+                                  &lt;android.view.ViewGroup index="3" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[852,107][931,174]" displayed="true"&gt;
+                                    &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[852,107][920,174]" displayed="true" /&gt;
+                                  &lt;/android.view.ViewGroup&gt;
+                                  &lt;android.view.ViewGroup index="4" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[931,107][1032,174]" displayed="true"&gt;
+                                    &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[942,107][1010,174]" displayed="true" /&gt;
+                                  &lt;/android.view.ViewGroup&gt;
+                                &lt;/android.view.ViewGroup&gt;
+                              &lt;/android.view.ViewGroup&gt;
+                            &lt;/android.view.ViewGroup&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                        &lt;/android.view.ViewGroup&gt;
+                      &lt;/android.view.ViewGroup&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                &lt;/android.widget.FrameLayout&gt;
+                &lt;android.widget.FrameLayout index="1" package="com.flipkart.android" class="android.widget.FrameLayout" text="" resource-id="com.flipkart.android:id/bottom_fragment" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2228][1080,2300]" displayed="true"&gt;
+                  &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" resource-id="com.flipkart.android:id/bottom_bar_container_fixed_height" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2228][1080,2300]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" resource-id="com.flipkart.android:id/main_content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2228][1080,2300]" displayed="true"&gt;
+                      &lt;android.widget.FrameLayout index="0" package="com.flipkart.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2228][1080,2300]" displayed="true"&gt;
+                        &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2228][1080,2300]" displayed="true"&gt;
+                          &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2228][1080,2231]" displayed="true" /&gt;
+                          &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2231][1080,2300]" displayed="true"&gt;
+                            &lt;android.view.ViewGroup index="0" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[6,2231][219,2300]" displayed="true"&gt;
+                              &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[45,2239][180,2300]" displayed="true" /&gt;
+                              &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="Home" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[75,2307][151,2358]" displayed="true" /&gt;
+                            &lt;/android.view.ViewGroup&gt;
+                            &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[219,2231][433,2300]" displayed="true"&gt;
+                              &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[258,2239][393,2300]" displayed="true" /&gt;
+                              &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="Categories" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[257,2307][394,2358]" displayed="true" /&gt;
+                            &lt;/android.view.ViewGroup&gt;
+                            &lt;android.view.ViewGroup index="2" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[433,2231][647,2300]" displayed="true"&gt;
+                              &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[472,2239][607,2300]" displayed="true" /&gt;
+                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[555,2237][599,2282]" displayed="true"&gt;
+                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="5" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[569,2240][585,2279]" displayed="true" /&gt;
+                              &lt;/android.view.ViewGroup&gt;
+                              &lt;android.widget.TextView index="2" package="com.flipkart.android" class="android.widget.TextView" text="Notifications" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[459,2307][621,2358]" displayed="true" /&gt;
+                            &lt;/android.view.ViewGroup&gt;
+                            &lt;android.view.ViewGroup index="3" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[647,2231][861,2300]" displayed="true"&gt;
+                              &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[686,2239][821,2300]" displayed="true" /&gt;
+                              &lt;android.widget.TextView index="1" package="com.flipkart.android" class="android.widget.TextView" text="Account" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[701,2307][807,2358]" displayed="true" /&gt;
+                            &lt;/android.view.ViewGroup&gt;
+                            &lt;android.view.ViewGroup index="4" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[861,2231][1074,2300]" displayed="true"&gt;
+                              &lt;android.widget.ImageView index="0" package="com.flipkart.android" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[900,2239][1035,2300]" displayed="true" /&gt;
+                              &lt;android.view.ViewGroup index="1" package="com.flipkart.android" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[983,2237][1028,2282]" displayed="true"&gt;
+                                &lt;android.widget.TextView index="0" package="com.flipkart.android" class="android.widget.TextView" text="2" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[997,2240][1013,2279]" displayed="true" /&gt;
+                              &lt;/android.view.ViewGroup&gt;
+                              &lt;android.widget.TextView index="2" package="com.flipkart.android" class="android.widget.TextView" text="Cart" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[941,2307][995,2358]" displayed="true" /&gt;
+                            &lt;/android.view.ViewGroup&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                        &lt;/android.view.ViewGroup&gt;
+                      &lt;/android.widget.FrameLayout&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                &lt;/android.widget.FrameLayout&gt;
+              &lt;/android.view.ViewGroup&gt;
+            &lt;/androidx.drawerlayout.widget.DrawerLayout&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.widget.LinearLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+    &lt;android.view.View index="2" package="com.flipkart.android" class="android.view.View" text="" resource-id="android:id/navigationBarBackground" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2366][1080,2408]" displayed="true" /&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240122 14:47:49.417" level="FAIL">ScreenshotException: Message: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.TakeScreenshotException: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeDeviceScreenshot(ScreenshotHelper.java:129)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:62)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:77)
+	at io.appium.uiautomator2.handler.CaptureScreenshot.safeHandle(CaptureScreenshot.java:32)
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:266)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:260)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:1012)
+</msg>
+<status status="FAIL" starttime="20240122 14:47:48.893" endtime="20240122 14:47:49.418"/>
+</kw>
+<msg timestamp="20240122 14:47:49.424" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: ScreenshotException: Message: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.TakeScreenshotException: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeDeviceScreenshot(ScreenshotHelper.java:129)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:62)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:77)
+	at io.appium.uiautomator2.handler.CaptureScreenshot.safeHandle(CaptureScreenshot.java:32)
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:266)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:260)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.jav...
+    [ Message content over the limit has been removed. ]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:1012)</msg>
+<msg timestamp="20240122 14:47:49.425" level="INFO">xpath criteria: //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup
+xpath criteria: //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup
+xpath criteria: //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup
+xpath criteria: //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup
+xpath criteria: //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup
+xpath criteria: //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup
+xpath criteria: //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup
+xpath criteria: //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup</msg>
+<msg timestamp="20240122 14:47:49.426" level="FAIL">Element locator '//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup' did not match any elements after 15 seconds</msg>
+<status status="FAIL" starttime="20240122 14:47:29.769" endtime="20240122 14:47:49.427"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ITEM}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 14:47:49.427" endtime="20240122 14:47:49.428"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BUY}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20240122 14:47:49.428" endtime="20240122 14:47:49.429"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BUY}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 14:47:49.429" endtime="20240122 14:47:49.430"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SIZE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 14:47:49.430" endtime="20240122 14:47:49.431"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONTIUNE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 14:47:49.431" endtime="20240122 14:47:49.432"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONTIUNE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240122 14:47:49.432" endtime="20240122 14:47:49.433"/>
+</kw>
+<status status="FAIL" starttime="20240122 14:47:29.768" endtime="20240122 14:47:49.434">Element locator '//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup' did not match any elements after 15 seconds</status>
+</test>
+<test id="s1-t4" name="Go to cart" line="66">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CART}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240122 14:47:51.843" level="INFO">xpath criteria: //android.widget.TextView[@text="Cart"]</msg>
+<status status="PASS" starttime="20240122 14:47:49.436" endtime="20240122 14:47:51.844"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CART}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240122 14:47:51.851" level="INFO">Clicking element '//android.widget.TextView[@text="Cart"]'.</msg>
+<msg timestamp="20240122 14:47:52.927" level="INFO">xpath criteria: //android.widget.TextView[@text="Cart"]</msg>
+<status status="PASS" starttime="20240122 14:47:51.844" endtime="20240122 14:47:52.927"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240122 14:47:56.574" level="INFO">xpath criteria: //android.widget.TextView[@text="Place order "]
+xpath criteria: //android.widget.TextView[@text="Place order "]</msg>
+<status status="PASS" starttime="20240122 14:47:52.927" endtime="20240122 14:47:56.574"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240122 14:47:56.581" level="INFO">Clicking element '//android.widget.TextView[@text="Place order "]'.</msg>
+<msg timestamp="20240122 14:47:57.393" level="INFO">xpath criteria: //android.widget.TextView[@text="Place order "]</msg>
+<status status="PASS" starttime="20240122 14:47:56.575" endtime="20240122 14:47:57.393"/>
+</kw>
+<status status="PASS" starttime="20240122 14:47:49.435" endtime="20240122 14:47:57.394"/>
+</test>
+<status status="FAIL" starttime="20240122 14:46:55.786" endtime="20240122 14:47:57.397"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="2" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240122 14:47:29.762" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: ScreenshotException: Message: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.TakeScreenshotException: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeDeviceScreenshot(ScreenshotHelper.java:129)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:62)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:77)
+	at io.appium.uiautomator2.handler.CaptureScreenshot.safeHandle(CaptureScreenshot.java:32)
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:266)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:260)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.jav...
+    [ Message content over the limit has been removed. ]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:1012)</msg>
+<msg timestamp="20240122 14:47:49.424" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: ScreenshotException: Message: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.TakeScreenshotException: Failed to capture a screenshot. Does the current view have 'secure' flag set?
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeDeviceScreenshot(ScreenshotHelper.java:129)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:62)
+	at io.appium.uiautomator2.utils.ScreenshotHelper.takeScreenshot(ScreenshotHelper.java:77)
+	at io.appium.uiautomator2.handler.CaptureScreenshot.safeHandle(CaptureScreenshot.java:32)
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:266)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:260)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.jav...
+    [ Message content over the limit has been removed. ]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:1012)</msg>
+</errors>
+</robot>

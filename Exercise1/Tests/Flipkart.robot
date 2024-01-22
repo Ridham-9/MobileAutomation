@@ -1,5 +1,6 @@
 *** Settings ***
-Library    AppiumLibrary
+Library    AppiumLibrary    run_on_failure=AppiumLibrary.CapturePageScreenshot
+
 
 *** Variables ***
 ${APPIUM_SERVER}    http://127.0.0.1:4723/wd/hub
@@ -11,10 +12,10 @@ ${PACKAGE_NAME}    com.flipkart.android
 ${ACTIVITY_NAME}    com.flipkart.android.SplashActivity
 ${CART}    //android.widget.TextView[@text="Cart"]
 ${PLACEORDER}     //android.widget.TextView[@text="Place order "]
-${TIMEOUT}    30s
-${ITEM}    //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup
+${TIMEOUT}    15s
+${ITEM}    //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.ImageView
 
-${SECTION}  //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup
+${SECTION}    //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView
 
 ${BUY}   //android.widget.TextView[@text="Buy now"]
 ${CONTIUNE}   //android.widget.TextView[@text="Continue"]
@@ -34,7 +35,7 @@ Open Test Application
     ...    noReset=true
     ...    allowInsecure=true
 
-Select Item
+Select Section
 
     sleep    5s
     Swipe   300    2200    300   150
@@ -44,11 +45,15 @@ Select Item
     Swipe   300    2200    300   150
     sleep    2s
     ${element_found}    Element Should Be Visible    ${SECTION}    timeout=${timeout}
-    Run Keyword If    ${element_found}    Click Element    ${SECTION}
-    ...    Else
-    ...    Log    Element not found within the specified timeout
+#    IF    ${element_found}
+#        Log    Element found within the specified timeout
+        Click Element     ${SECTION}
+#        Log    Element found within the specified timeout
+#    ELSE
+#        Log    Element not found within the specified timeout
+#    END
 
-
+Select Item
     Wait Until Element Is Visible   ${ITEM}    ${TIMEOUT}
     Click Element    ${ITEM}
     Wait Until Element Is Visible   ${BUY}    ${TIMEOUT}
@@ -58,10 +63,10 @@ Select Item
     Click Element    ${CONTIUNE}
     Click Element    ${CONTIUNE}
 
-#Go to cart
-#    Wait Until Element Is Visible   ${CART}    ${TIMEOUT}
-#    Click Element    ${CART}
-#    Wait Until Element Is Visible   ${PLACEORDER}    ${TIMEOUT}
-#    Click Element    ${PLACEORDER}
-#
+Go to cart
+    Wait Until Element Is Visible   ${CART}    ${TIMEOUT}
+    Click Element    ${CART}
+    Wait Until Element Is Visible   ${PLACEORDER}    ${TIMEOUT}
+    Click Element    ${PLACEORDER}
+
 
