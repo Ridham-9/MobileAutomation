@@ -12,11 +12,14 @@ ${ACTIVITY_NAME}    com.flipkart.android.SplashActivity
 ${CART}    //android.widget.TextView[@text="Cart"]
 ${PLACEORDER}     //android.widget.TextView[@text="Place order "]
 ${TIMEOUT}    30s
-${ITEM}    //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView
-	#(//android.widget.TextView[@text="CAMPUS"])[2]
-${SECTION}   //android.widget.ImageView[@index='1']
+${ITEM}    //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[4]/android.view.ViewGroup
+
+${SECTION}  //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup
+
 ${BUY}   //android.widget.TextView[@text="Buy now"]
 ${CONTIUNE}   //android.widget.TextView[@text="Continue"]
+${SIZE}    //android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup
+
 *** Keywords ***
 
 *** Test Cases ***
@@ -35,17 +38,24 @@ Select Item
 
     sleep    5s
     Swipe   300    2200    300   150
-    sleep    2s
+    sleep    3s
     Swipe   300    2200    300   150
     sleep    2s
     Swipe   300    2200    300   150
     sleep    2s
-#    Wait Until Element Is Visible   ${SECTION}    ${TIMEOUT}
-#    Click Element    ${SECTION}
+    ${element_found}    Element Should Be Visible    ${SECTION}    timeout=${timeout}
+    Run Keyword If    ${element_found}    Click Element    ${SECTION}
+    ...    Else
+    ...    Log    Element not found within the specified timeout
+
+
     Wait Until Element Is Visible   ${ITEM}    ${TIMEOUT}
     Click Element    ${ITEM}
     Wait Until Element Is Visible   ${BUY}    ${TIMEOUT}
     Click Element    ${BUY}
+    Click Element    ${SIZE}
+
+    Click Element    ${CONTIUNE}
     Click Element    ${CONTIUNE}
 
 #Go to cart
