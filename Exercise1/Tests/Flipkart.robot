@@ -35,33 +35,33 @@ Open Test Application
     ...    noReset=true
     ...    allowInsecure=true
 
-Select Section
-
-    sleep    5s
-    Swipe   300    2200    300   150
-    sleep    3s
-    Swipe   300    2200    300   150
-    sleep    2s
-    Swipe   300    2200    300   150
-    sleep    2s
-    ${element_found}    Element Should Be Visible    ${SECTION}    timeout=${timeout}
-#    IF    ${element_found}
-#        Log    Element found within the specified timeout
-        Click Element     ${SECTION}
-#        Log    Element found within the specified timeout
-#    ELSE
-#        Log    Element not found within the specified timeout
-#    END
-
-Select Item
-    Wait Until Element Is Visible   ${ITEM}    ${TIMEOUT}
-    Click Element    ${ITEM}
-    Wait Until Element Is Visible   ${BUY}    ${TIMEOUT}
-    Click Element    ${BUY}
-    Click Element    ${SIZE}
-
-    Click Element    ${CONTIUNE}
-    Click Element    ${CONTIUNE}
+#Select Section
+#
+#    sleep    5s
+#    Swipe   300    2200    300   150
+#    sleep    3s
+#    Swipe   300    2200    300   150
+#    sleep    2s
+#    Swipe   300    2200    300   150
+#    sleep    2s
+#    ${element_found}    Element Should Be Visible    ${SECTION}    timeout=${timeout}
+##    IF    ${element_found}
+##        Log    Element found within the specified timeout
+#        Click Element     ${SECTION}
+##        Log    Element found within the specified timeout
+##    ELSE
+##        Log    Element not found within the specified timeout
+##    END
+#
+#Select Item
+#    Wait Until Element Is Visible   ${ITEM}    ${TIMEOUT}
+#    Click Element    ${ITEM}
+#    Wait Until Element Is Visible   ${BUY}    ${TIMEOUT}
+#    Click Element    ${BUY}
+#    Click Element    ${SIZE}
+#
+#    Click Element    ${CONTIUNE}
+#    Click Element    ${CONTIUNE}
 
 Go to cart
     Wait Until Element Is Visible   ${CART}    ${TIMEOUT}

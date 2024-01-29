@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240129 11:27:52.473" rpa="false" schemaversion="4">
+<suite id="s1" name="Flipkart" source="/home/ridham/PycharmProjects/MobileAutomation/Exercise1/Tests/Flipkart.robot">
+<test id="s1-t1" name="Open Test Application" line="27">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<arg>allowInsecure=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240129 11:27:53.158" endtime="20240129 11:28:10.118"/>
+</kw>
+<status status="PASS" starttime="20240129 11:27:53.135" endtime="20240129 11:28:10.119"/>
+</test>
+<test id="s1-t2" name="Go to cart" line="66">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CART}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240129 11:28:10.130" level="FAIL">Variable '${CART}' not found.</msg>
+<status status="FAIL" starttime="20240129 11:28:10.124" endtime="20240129 11:28:10.131"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CART}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240129 11:28:10.132" endtime="20240129 11:28:10.132"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20240129 11:28:10.133" endtime="20240129 11:28:10.133"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PLACEORDER}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240129 11:28:10.134" endtime="20240129 11:28:10.134"/>
+</kw>
+<status status="FAIL" starttime="20240129 11:28:10.122" endtime="20240129 11:28:10.135">Variable '${CART}' not found.</status>
+</test>
+<status status="FAIL" starttime="20240129 11:27:52.474" endtime="20240129 11:28:10.138"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240129 11:27:53.133" level="ERROR">Error in file '/home/ridham/PycharmProjects/MobileAutomation/Exercise1/Tests/Flipkart.robot' on line 13: Setting variable '${CART}' failed: Variable '@{elementId}' not found.</msg>
+</errors>
+</robot>

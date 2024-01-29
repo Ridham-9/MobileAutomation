@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240129 18:03:20.152" rpa="false" schemaversion="4">
+<suite id="s1" name="Calculator" source="/home/ridham/PycharmProjects/MobileAutomation/Exercise1/Tests/Calculator.robot">
+<test id="s1-t1" name="Open Test Application" line="72">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240129 18:03:21.853" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240129 18:03:21.853" endtime="20240129 18:03:21.983"/>
+</kw>
+<msg timestamp="20240129 18:03:21.984" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240129 18:03:21.985" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/ridham/Android/Sdk/platform-tools/adb -P 5037 -s RZ8T70PFYJV shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RZ8T70PFYJV' not found
+
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/ridham/Android/Sdk/platform-tools/adb -P 5037 -s RZ8T70PFYJV shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RZ8T70PFYJV' not found
+
+    at getResponseForW3CError (/tmp/.mount_AppiumIkbJWH/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/tmp/.mount_AppiumIkbJWH/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</msg>
+<status status="FAIL" starttime="20240129 18:03:20.687" endtime="20240129 18:03:21.985"/>
+</kw>
+<status status="FAIL" starttime="20240129 18:03:20.686" endtime="20240129 18:03:21.985">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/ridham/Android/Sdk/platform-tools/adb -P 5037 -s RZ8T70PFYJV shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RZ8T70PFYJV' not found
+
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/ridham/Android/Sdk/platform-tools/adb -P 5037 -s RZ8T70PFYJV shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RZ8T70PFYJV' not found
+
+    at getResponseForW3CError (/tmp/.mount_AppiumIkbJWH/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/tmp/.mount_AppiumIkbJWH/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</status>
+</test>
+<test id="s1-t2" name="Perform Some Operation" line="82">
+<kw name="Perform Addition">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240129 18:03:21.988" level="INFO">Clicking element '//android.widget.Button[@content-desc="6"]'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240129 18:03:21.988" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240129 18:03:21.988" endtime="20240129 18:03:21.997"/>
+</kw>
+<msg timestamp="20240129 18:03:21.999" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240129 18:03:22.000" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240129 18:03:21.987" endtime="20240129 18:03:22.000"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240129 18:03:22.000" endtime="20240129 18:03:22.000"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-1.3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240129 18:03:22.000" endtime="20240129 18:03:22.000"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PLUS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240129 18:03:22.000" endtime="20240129 18:03:22.000"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240129 18:03:22.000" endtime="20240129 18:03:22.000"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DIGIT-2.2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240129 18:03:22.001" endtime="20240129 18:03:22.001"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${EQUAL}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20240129 18:03:22.001" endtime="20240129 18:03:22.001"/>
+</kw>
+<status status="FAIL" starttime="20240129 18:03:21.986" endtime="20240129 18:03:22.001"/>
+</kw>
+<kw name="Perform Substrsction">
+<status status="NOT RUN" starttime="20240129 18:03:22.001" endtime="20240129 18:03:22.001"/>
+</kw>
+<kw name="Perform Multiplication">
+<status status="NOT RUN" starttime="20240129 18:03:22.001" endtime="20240129 18:03:22.001"/>
+</kw>
+<kw name="Perform Division">
+<status status="NOT RUN" starttime="20240129 18:03:22.002" endtime="20240129 18:03:22.002"/>
+</kw>
+<kw name="Perform Percentage">
+<status status="NOT RUN" starttime="20240129 18:03:22.002" endtime="20240129 18:03:22.002"/>
+</kw>
+<status status="FAIL" starttime="20240129 18:03:21.986" endtime="20240129 18:03:22.002">No application is open</status>
+</test>
+<status status="FAIL" starttime="20240129 18:03:20.156" endtime="20240129 18:03:22.003"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Calculator">Calculator</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240129 18:03:21.984" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240129 18:03:21.999" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
