@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         ANDROID_HOME = "/home/ridham/Android/Sdk"
-        PATH = "/usr/bin/node:${env.ANDROID_HOME}/tools:${env.ANDROID_HOME}/platform-tools:${env.PATH}"
+        PATH = "/usr/bin/node:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${PATH}"
     }
 
     stages {
@@ -11,8 +11,8 @@ pipeline {
             steps {
                 script {
                     // Set up Node.js
-                    env.NODE_HOME = tool name: 'NodeJS', type: 'NodeJSInstallation'
-                    env.PATH = "${env.NODE_HOME}/bin:${env.PATH}"
+                    def nodeHome = tool name: 'NodeJS', type: 'NodeJSInstallation'
+                    env.PATH = "${nodeHome}/bin:${PATH}"
                 }
                 // Use sudo to install necessary packages
                 sh 'sudo npm install -g appium'
@@ -24,18 +24,22 @@ pipeline {
         }
         stage('Start Appium Server') {
             steps {
-                sh 'appium'
+                sh 'appium &'
+                sleep 10 // Waiting for Appium server to start
             }
         }
         stage('Run Tests') {
             steps {
-                // Assuming your Robot Framework test cases are in a folder named 'tests'
                 sh 'robot Tests/Calculator.robot'
             }
         }
     }
 
     post {
+        always {
+            // Clean up
+            sh 'sudo pkill -f appium || true'
+        }
         success {
             echo 'Tests passed!'
         }
