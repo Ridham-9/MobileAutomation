@@ -20,6 +20,7 @@ pipeline {
                 sh 'pip install robotframework'
                 sh 'pip install robotframework robotframework-appiumlibrary'
                 sh 'sudo apt-get install android-tools-adb -y'
+                sh  '. venv/bin/activate'
             }
         }
         stage('Start Appium Server') {
@@ -30,7 +31,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                sh 'robot Tests/Calculator.robot'
+                sh '. venv/bin/activate && robot Tests/Calculator.robot'
             }
         }
     }
