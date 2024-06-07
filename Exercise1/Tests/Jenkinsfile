@@ -9,10 +9,9 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                script {
+                 script {
                     // Set up Node.js
-                    def nodeHome = tool name: 'NodeJS 20.12.1'
-                    env.PATH = "${nodeHome}/bin:${PATH}"
+                    env.PATH = "/usr/bin/nodeJs/20.5.0/bin:${PATH}"
                 }
                 // Use sudo to install necessary packages
                 sh 'sudo npm install -g appium'
