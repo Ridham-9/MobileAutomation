@@ -14,13 +14,14 @@ pipeline {
                     env.PATH = "/usr/share/man/man1/nodejs.1.gz:${PATH}"
                 }
                 // Use sudo to install necessary packages
+                sh 'python3 -m venv venv'
+                sh  '. venv/bin/activate'
                 sh 'sudo npm install -g appium'
                 sh 'sudo npm install -g appium-doctor'
                 sh 'appium-doctor --android'
                 sh 'pip install robotframework'
                 sh 'pip install robotframework robotframework-appiumlibrary'
                 sh 'sudo apt-get install android-tools-adb -y'
-                sh  '. venv/bin/activate'
             }
         }
         stage('Start Appium Server') {
