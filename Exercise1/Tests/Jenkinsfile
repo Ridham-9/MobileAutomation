@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     // Set up Node.js
-                    def nodeHome = tool name: 'NodeJS'
+                    def nodeHome = tool name: 'NodeJS 20.12.1'
                     env.PATH = "${nodeHome}/bin:${PATH}"
                 }
                 // Use sudo to install necessary packages
