@@ -27,7 +27,6 @@ pipeline {
                 sh 'sudo npm install -g appium'
                 sh 'sudo npm install -g appium-doctor'
                 sh 'appium-doctor --android'
-                sh 'pip install robotframework'
                 sh 'pip install robotframework robotframework-appiumlibrary'
                 sh 'sudo apt-get install android-tools-adb -y'
             }
