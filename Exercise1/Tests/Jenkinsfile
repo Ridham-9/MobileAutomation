@@ -45,7 +45,7 @@ pipeline {
                     // Run Robot Framework tests within the activated virtual environment
                     sh '''
                         . venv/bin/activate
-                        robot Tests/Calculator.robot
+                        robot Exercise1/Tests/Calculator.robot
                     '''
                 }
             }
