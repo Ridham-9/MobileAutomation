@@ -36,10 +36,6 @@ pipeline {
     }
 
     post {
-        always {
-            // Clean up
-            sh 'pkill -f appium'
-        }
         success {
             echo 'Tests passed!'
         }
