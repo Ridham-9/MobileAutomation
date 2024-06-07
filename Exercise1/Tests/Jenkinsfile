@@ -11,7 +11,7 @@ pipeline {
             steps {
                  script {
                     // Set up Node.js
-                    env.PATH = "/home/ridham/.nvm/versions/node/v20.12.1/bin/node:${PATH}"
+                    env.PATH = "/usr/share/man/man1/nodejs.1.gz:${PATH}"
                 }
                 // Use sudo to install necessary packages
                 sh 'sudo npm install -g appium'
