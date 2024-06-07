@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Start Appium Server') {
             steps {
-                sh 'appium &'
+                sh 'appium'
             }
         }
         stage('Run Tests') {
