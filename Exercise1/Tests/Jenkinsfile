@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     environment {
-        PATH = "/usr/bin/node:${env.PATH}"
         ANDROID_HOME = "/home/ridham/Android/Sdk"
-        PATH = "${env.ANDROID_HOME}/tools:${env.ANDROID_HOME}/platform-tools:${env.PATH}"
+        PATH = "/usr/bin/node:${env.ANDROID_HOME}/tools:${env.ANDROID_HOME}/platform-tools:${env.PATH}"
     }
 
     stages {
@@ -15,11 +14,12 @@ pipeline {
                     env.NODE_HOME = tool name: 'NodeJS', type: 'NodeJSInstallation'
                     env.PATH = "${env.NODE_HOME}/bin:${env.PATH}"
                 }
-                sh 'npm install -g appium'
-                sh 'npm install -g appium-doctor'
+                // Use sudo to install necessary packages
+                sh 'sudo npm install -g appium'
+                sh 'sudo npm install -g appium-doctor'
                 sh 'appium-doctor --android'
                 sh 'pip install robotframework robotframework-appiumlibrary'
-                sh 'sudo apt-get install android-tools-adb'
+                sh 'sudo apt-get install android-tools-adb -y'
             }
         }
         stage('Start Appium Server') {
