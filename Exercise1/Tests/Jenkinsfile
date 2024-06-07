@@ -1,0 +1,50 @@
+pipeline {
+    agent any
+
+    environment {
+        PATH = "/usr/bin/node:${env.PATH}"
+        ANDROID_HOME = "/home/ridham/Android/Sdk"
+        PATH = "${env.ANDROID_HOME}/tools:${env.ANDROID_HOME}/platform-tools:${env.PATH}"
+    }
+
+    stages {
+        stage('Setup') {
+            steps {
+                script {
+                    // Set up Node.js
+                    env.NODE_HOME = tool name: 'NodeJS', type: 'NodeJSInstallation'
+                    env.PATH = "${env.NODE_HOME}/bin:${env.PATH}"
+                }
+                sh 'npm install -g appium'
+                sh 'npm install -g appium-doctor'
+                sh 'appium-doctor --android'
+                sh 'pip install robotframework robotframework-appiumlibrary'
+                sh 'sudo apt-get install android-tools-adb'
+            }
+        }
+        stage('Start Appium Server') {
+            steps {
+                sh 'appium &'
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                // Assuming your Robot Framework test cases are in a folder named 'tests'
+                sh 'robot Tests/Calculator.robot'
+            }
+        }
+    }
+
+    post {
+        always {
+            // Clean up
+            sh 'pkill -f appium'
+        }
+        success {
+            echo 'Tests passed!'
+        }
+        failure {
+            echo 'Tests failed.'
+        }
+    }
+}
