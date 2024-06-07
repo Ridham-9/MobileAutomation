@@ -17,18 +17,20 @@ pipeline {
         }
         stage('Setup') {
             steps {
-                 script {
-                    // Set up Node.js
-                    env.PATH = "/usr/share/man/man1/nodejs.1.gz:${PATH}"
+                script {
+                    // Create virtual environment
+                    sh 'python3 -m venv venv'
+                    // Activate virtual environment and install dependencies
+                    sh '''
+                        . venv/bin/activate
+                        pip install robotframework robotframework-appiumlibrary
+                    '''
+                    // Install necessary packages
+                    sh 'sudo npm install -g appium'
+                    sh 'sudo npm install -g appium-doctor'
+                    sh 'appium-doctor --android'
+                    sh 'sudo apt-get install android-tools-adb -y'
                 }
-                // Use sudo to install necessary packages
-                sh 'python3 -m venv venv'
-                sh  '. venv/bin/activate'
-                sh 'sudo npm install -g appium'
-                sh 'sudo npm install -g appium-doctor'
-                sh 'appium-doctor --android'
-                sh 'pip install robotframework robotframework-appiumlibrary'
-                sh 'sudo apt-get install android-tools-adb -y'
             }
         }
         stage('Start Appium Server') {
@@ -39,7 +41,13 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                sh '. venv/bin/activate && robot Tests/Calculator.robot'
+                script {
+                    // Run Robot Framework tests within the activated virtual environment
+                    sh '''
+                        . venv/bin/activate
+                        robot Tests/Calculator.robot
+                    '''
+                }
             }
         }
     }
