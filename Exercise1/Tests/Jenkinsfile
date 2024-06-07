@@ -23,13 +23,14 @@ pipeline {
                     // Activate virtual environment and install dependencies
                     sh '''
                         . venv/bin/activate
-                        pip install robotframework robotframework-appiumlibrary
+                       #  pip install robotframework robotframework-appiumlibrary
                     '''
                     // Install necessary packages
                     sh 'sudo npm install -g appium'
                     sh 'sudo npm install -g appium-doctor'
                     sh 'appium-doctor --android'
                     sh 'sudo apt-get install android-tools-adb -y'
+                    sh 'adb devices'
                 }
             }
         }
